@@ -21,19 +21,71 @@ header {
   background-color: #000000;
 }
 
+.sticky {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sticky .nav-link {
+  color: white;
+}
+
 .nav-link {
   color: #b0b0b0;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   transition: 0.2s;
+  font-weight: 600;
+}
+
+.nav-item a {
+  position: relative;
+}
+
+.nav-item a:focus {
+  color: #ff9b51;
+}
+
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background: #ff9b51;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-item a:hover::before {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background: #ff9b51;
+  bottom: 0;
+  right: 0;
+  transition: 0.3s;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
+  transition: 0.3s;
 }
 
 .nav-link:hover {
   color: white;
   transition: 0.2s;
 }
+
 .nav-item {
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 .navbar-toggler {
@@ -59,7 +111,7 @@ header {
   font-size: 36px;
   color: #ffffff;
   font-weight: 400;
-  margin-right: 80px;
+  /* margin-right: 80px; */
 }
 
 .white-line {
@@ -77,11 +129,40 @@ header {
   margin-bottom: 45px;
 }
 
-.banner-left button {
+.special_button {
   font-family: "Open Sans", sans-serif;
-  border-radius: 0% !important;
-  border: 2px solid white !important;
+  border: 2px solid white;
   font-weight: 600;
+  background-color: transparent;
+  padding: 10px 30px;
+  color: whitesmoke;
+  font-size: 15px;
+  position: relative;
+  z-index: 9;
+  transition: 0.3s;
+}
+.special_button:hover {
+  color: black;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.3s;
+  border: 2px solid black;
+}
+
+.special_button::before {
+  content: "";
+  position: absolute;
+  background-color: #f28436;
+  width: 00%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+.special_button:hover::before {
+  width: 100%;
+  transition: 0.3s;
 }
 
 .form-top {
@@ -144,6 +225,12 @@ header {
   padding: 17px 0px;
   border-bottom-left-radius: 5px !important;
   border-bottom-right-radius: 5px !important;
+  transition: 0.3s;
+}
+.form-bottom button:hover {
+  background: black;
+  color: #ff9b51;
+  transition: 0.3s;
 }
 
 .brand-bar {
@@ -412,6 +499,7 @@ header {
   font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
+  font-weight: 400;
 }
 
 .service-heading p {
@@ -421,6 +509,19 @@ header {
   color: #86878b;
   margin: 0;
   padding: 0;
+}
+
+.s-item:hover {
+  cursor: pointer;
+  box-shadow: rgba(236, 122, 16, 0.356) 0px 7px 29px 0px;
+
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.s-item {
+  padding: 20px;
+  transition: 0.3s;
 }
 
 .s-item h3 {
@@ -446,12 +547,113 @@ header {
   font-weight: normal;
   font-size: 14px;
   color: #86878b;
+  margin: 0;
 }
 .service-items {
   text-align: center;
 }
 
 /* ** Services Section Ends Here** */
+
+/* ** Pricing Section Starts Here** */
+.pricing-section {
+  background: #f5f5f5;
+  padding: 100px 0 95px 0;
+  text-align: center;
+}
+
+.pricelists_ {
+  align-items: flex-end;
+}
+.plist {
+  text-align: center;
+}
+.plistup {
+  background: #333333;
+  padding: 25px 0;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.plistup h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.plistmid {
+  background: #333333;
+}
+.plistmid h4 {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.plistmid h4 span {
+  font-size: 94px;
+}
+.plistmid p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  color: #939393;
+  font-weight: 600;
+  padding-bottom: 25px;
+}
+.plistline {
+  height: 5px;
+  width: 100%;
+  background: #ff8b38;
+}
+
+.plist2 {
+  /* margin: 0px 25px; */
+}
+
+.diffline {
+  padding: 10px 0;
+  background: #ff8b38;
+}
+
+.diffline h5 {
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+.plistbot {
+  background-color: #ffffff;
+}
+.plistbot ul {
+  text-transform: uppercase;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.plistbot ul li {
+  color: #9d9ea1;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 15px 0;
+}
+
+.plistbot ul li:last-child {
+  border: none;
+}
+
+/* ** Pricing Section Ends Here** */
+
 /* ** Testimonial Section Starts Here** */
 .testimonial {
   padding: 100px 0;
@@ -535,7 +737,7 @@ header {
 }
 
 .custome-banner {
-  padding: 60px 0;
+  padding: 70px 0 60px 0;
   text-align: center;
 }
 
@@ -555,7 +757,7 @@ header {
   color: #cccccc;
   margin: 0;
   padding: 0;
-  margin: 30px 0;
+  margin-bottom: 35px;
 }
 
 /* <!-- Custom Section Ends Here --> */
