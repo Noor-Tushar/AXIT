@@ -225,7 +225,7 @@ header {
   padding: 17px 0px;
   border-bottom-left-radius: 5px !important;
   border-bottom-right-radius: 5px !important;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .form-bottom button:hover {
   background: black;
